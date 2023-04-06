@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-Wall
-LDLIBS=-lMLV -lm
+LDLIBS=-lMLV -lm -Werror
 
 SRCDIR=src
 OBJDIR=obj
@@ -8,12 +8,11 @@ OBJDIR=obj
 EXEC=taquin
 
 $(OBJDIR)/taquin.o: $(SRCDIR)/taquin.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(EXEC): $(OBJDIR)/taquin.o
 	$(CC) $^ -o $@ $(LDLIBS)
 	./taquin
 
 clean : 
-	rm taquin
 	rm obj/*.o

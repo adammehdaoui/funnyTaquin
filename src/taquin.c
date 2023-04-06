@@ -35,7 +35,7 @@ void display_black_rectangle(int startX, int startY, int height, int width){
 }
 
 void display_game(Plateau *P, MLV_Image *image){
-    int i, j, ii, jj, x, y, r, g, b, a, startX, startY, endX, endY;
+    int i, j, x, y, r, g, b, a, startX, startY, endX, endY;
 
     for(i=0; i<NB_LIG; i++){
         for(j=0; j<NB_COL; j++){
@@ -44,17 +44,18 @@ void display_game(Plateau *P, MLV_Image *image){
             startY = P->bloc[i][j].col*CELL;
             endX = startX+CELL;
             endY = startY+CELL;
-            ii = i*CELL;
-            jj = j*CELL;
 
-            if(P->bloc[i][j].lig == -1 && P->bloc[i][j].col == -1){
-                display_black_rectangle(startX, startY, CELL, CELL);
+            if(P->bloc[i][j].lig == -1){
+                display_black_rectangle(i*CELL, j*CELL, CELL, CELL);
+                fprintf(stdout,"black en i:%d j:%d\n",i,j);
             }
             else{
+                fprintf(stdout,"copie du bloc %d %d en %d %d    %d %d\n",startX,startY,i*CELL,j*CELL,CELL, startX%(CELL));
                 for(x=startX; x<endX; x++){
                     for(y=startY; y<endY; y++){
-                        MLV_get_pixel_on_image(image, ii, jj, &r, &g, &b, &a);
-                        MLV_draw_pixel(x, y, MLV_rgba(r, g, b, a));
+                        MLV_get_pixel_on_image(image, x, y, &r, &g, &b, &a);
+                        //fprintf(stdout,"copie pixel %d %d en %d %d\n",x,y,i*CELL+(x%CELL), j*CELL+(y%CELL));
+                        MLV_draw_pixel(i*CELL+(x%(CELL)), j*CELL+(y%(CELL)), MLV_rgba(r, g, b, a));
                     }
                 }
             }
@@ -123,7 +124,6 @@ int main(int argc, char *argv[]){
             board.bloc[i][j].lig = -1;
             board.bloc[i][j].col = -1;
 
-            printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         }
         else{
             /* On clique dans une case qui n'est pas voisine de la case noire il ne se passe rien */
