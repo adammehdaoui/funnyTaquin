@@ -1,0 +1,6 @@
+#Executable file after make
+main
+
+#Objects files
+*.o
+
