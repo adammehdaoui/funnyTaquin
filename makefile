@@ -1,6 +1,6 @@
 CC := gcc
 CFLAGS := -Wall
-LDLIBS := -lMLV -lm -Werror
+LDLIBS := -lMLV -lm
 
 all : main
 
@@ -12,4 +12,4 @@ run :
 	./main
 
 clean : 
-	rm *.o
+	rm main
