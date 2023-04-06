@@ -22,10 +22,13 @@ void initialisationPlateau(Plateau* P) {
     int i,j;
     for(i=0; i<NB_LIG; i++){
         for (j=0; j<NB_COL; j++){
-            ((P->bloc)[i][j]).lig = i ;
-            ((P->bloc)[i][j]).col = j ;
+            ((P->bloc)[i][j]).lig = i;
+            ((P->bloc)[i][j]).col = j;
         }
     }
+}
+
+void mixPlateau(Plateau* P){
 }
 
 void display_game(Plateau *P, MLV_Image *image){
@@ -67,11 +70,19 @@ void display_black_rectangle(int startX, int startY, int height, int width){
 }
 
 int main(int argc, char *argv[]){
+    Plateau exBoard;
     Plateau board;
+    initialisationPlateau(&exBoard);
     initialisationPlateau(&board); 
+
+    int x, y, lig, col;
 
     MLV_create_window(GAME, NULL, RES, RES); 	
     MLV_Image* image = MLV_load_image("data/image.jpg"); 
+    if (!image) {
+        fprintf(stderr, "Impossible de charger l'image.\n");
+        return 1;
+    }
 
     display_game(&board, image);
 
@@ -79,8 +90,17 @@ int main(int argc, char *argv[]){
 
     display_black_rectangle((NB_LIG-1)*CELL, (NB_COL-1)*CELL, CELL, CELL);
 
-    MLV_actualise_window();
-    MLV_wait_seconds(10);
+    while(1){
+        MLV_actualise_window();
+
+        MLV_wait_mouse(&x,&y);
+
+        lig = y/(CELL);
+        col = x/(CELL);
+
+        fprintf(stdout, "cell : %d\n", CELL);
+    }
+
     MLV_free_window();
 
     return 0;

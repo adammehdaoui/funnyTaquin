@@ -12,6 +12,8 @@ $(OBJDIR)/taquin.o: $(SRCDIR)/taquin.c
 
 $(EXEC): $(OBJDIR)/taquin.o
 	$(CC) $^ -o $@ $(LDLIBS)
+	./taquin
 
 clean : 
 	rm taquin
+	rm obj/*.o
