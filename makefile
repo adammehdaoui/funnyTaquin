@@ -1,15 +1,17 @@
-CC := gcc
-CFLAGS := -Wall
-LDLIBS := -lMLV -lm
+CC=gcc
+CFLAGS=-Wall
+LDLIBS=-lMLV -lm
 
-all : main
+SRCDIR=src
+OBJDIR=obj
 
-main :
-	$(CC) -o main main.c $(LDLIBS) $(CFLAGS)
+EXEC=taquin
 
-run : 
-	$(CC) -o main main.c $(LDLIBS) $(CFLAGS)
-	./main
+$(OBJDIR)/taquin.o: $(SRCDIR)/taquin.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(EXEC): $(OBJDIR)/taquin.o
+	$(CC) $^ -o $@ $(LDLIBS)
 
 clean : 
-	rm main
+	rm taquin
