@@ -32,13 +32,10 @@ int pxToInd(int px){
 }
 
 void display_game(Plateau *P, MLV_Image *image){
-    int i, j;
-    int r, g, b, a;
+    int i, j, r, g, b, a, startX, startY, endX, endY;
 
     for(i=0; i<NB_LIG; i++){
         for(j=0; j<NB_COL; j++){
-
-            int startX, startY, endX, endY;
 
             startX = i*((int)RES/NB_COL);
             startY = j*((int)RES/NB_COL);
@@ -48,14 +45,24 @@ void display_game(Plateau *P, MLV_Image *image){
             for(int x=startX; x<endX; x++){
                 for(int y=startY; y<endY; y++){
                     MLV_get_pixel_on_image(image, x, y, &r, &g, &b, &a);
-                    MLV_draw_pixel(x, y, MLV_convert_rgba_to_color(r, g, b, a));
+                    MLV_draw_pixel(x, y, MLV_rgba(r, g, b, a));
                 }
             }
         }
     }
 }
 
-void display_grid(){
+void display_grid(Plateau *P){
+    int i, j, startX, startY, endX, endY;
+
+    for(i=0; i<NB_LIG; i++){
+        for(j=0; j<NB_COL; j++){
+            // startX = i*((int)RES/NB_COL);
+            // startY = j*((int)RES/NB_COL);
+            // endX = startX + ((int)RES/NB_COL);
+            // endY = startY + ((int)RES/NB_COL);
+        }
+    }
 }
 
 int main(int argc, char *argv[]){
