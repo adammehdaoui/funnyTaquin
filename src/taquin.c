@@ -17,7 +17,7 @@ typedef struct Plateau {
     Carre bloc[NB_COL][NB_LIG];
 } Plateau ;
 
-void initialisationPlateau(Plateau* P) {
+void initialisationPlateau(Plateau *P) {
     int i,j;
     for(i=0; i<NB_LIG; i++){
         for (j=0; j<NB_COL; j++){
@@ -27,7 +27,26 @@ void initialisationPlateau(Plateau* P) {
     }
 }
 
-void mixPlateau(Plateau* P){
+void mixPlateau(Plateau *P){
+
+}
+
+int display_win(Plateau *P){
+    int i, j, flag = 0;
+
+    for(i=0; i<(NB_LIG); i++){
+        for (j=0; j<(NB_COL); j++){
+            if(i==3 && j==3){
+                // on ne teste pas le dernier carreau
+            }
+            else {
+                if(P->bloc[i][j].lig != i || P->bloc[i][j].col !=j){
+                    flag = 1;
+                }
+            }
+        }
+    }
+    return flag;
 }
 
 void display_black_rectangle(int startX, int startY, int height, int width){
@@ -36,29 +55,28 @@ void display_black_rectangle(int startX, int startY, int height, int width){
 
 void display_game(Plateau *P, MLV_Image *image){
     int i, j, x, y, r, g, b, a, startX, startY, endX, endY;
-
+// c est bizarre d'utiliser les variables r g b a non init
     for(i=0; i<NB_LIG; i++){
         for(j=0; j<NB_COL; j++){
 
-            startX = P->bloc[i][j].lig*CELL;
-            startY = P->bloc[i][j].col*CELL;
-            endX = startX+CELL;
-            endY = startY+CELL;
+            startX = P->bloc[i][j].lig*(CELL);
+            startY = P->bloc[i][j].col*(CELL);
+            endX = startX+(CELL);
+            endY = startY+(CELL);
 
-            if(P->bloc[i][j].lig == -1){
-                display_black_rectangle(i*CELL, j*CELL, CELL, CELL);
-                fprintf(stdout,"black en i:%d j:%d\n",i,j);
-            }
-            else{
-                fprintf(stdout,"copie du bloc %d %d en %d %d    %d %d\n",startX,startY,i*CELL,j*CELL,CELL, startX%(CELL));
+            if(P->bloc[i][j].lig != -1){
+            
                 for(x=startX; x<endX; x++){
                     for(y=startY; y<endY; y++){
                         MLV_get_pixel_on_image(image, x, y, &r, &g, &b, &a);
-                        //fprintf(stdout,"copie pixel %d %d en %d %d\n",x,y,i*CELL+(x%CELL), j*CELL+(y%CELL));
-                        MLV_draw_pixel(i*CELL+(x%(CELL)), j*CELL+(y%(CELL)), MLV_rgba(r, g, b, a));
+                        MLV_draw_pixel(i*(CELL)+(x%(CELL)), j*(CELL)+(y%(CELL)), MLV_rgba(r, g, b, a));
                     }
                 }
             }
+            else{
+
+                display_black_rectangle(i*CELL, j*CELL, CELL, CELL);
+            }    
         }
     }
 }
@@ -84,6 +102,7 @@ int main(int argc, char *argv[]){
     board.bloc[3][3].col = -1;
 
     int x, y, i, j;
+    int rx, ry;
 
     MLV_create_window(GAME, NULL, RES, RES); 	
     MLV_Image* image = MLV_load_image("data/image.jpg"); 
@@ -95,62 +114,84 @@ int main(int argc, char *argv[]){
     display_game(&board, image);
     display_grid(&board);
 
-    while(1){
-        MLV_actualise_window();
+    for(int n=0; n<20; n++){
+        rx = MLV_get_random_integer(0, RES);
+        ry = MLV_get_random_integer(0, RES);
 
-        MLV_wait_mouse(&x,&y);
+        i = rx/(CELL);
+        j = ry/(CELL);
 
-        i = y/(CELL);
-        j = x/(CELL);
-
-        if(board.bloc[i][j].lig == -1 && board.bloc[i][j].col == -1){
-            /* On clique dans la case noire il ne se passe rien */
-        }
-        else if(board.bloc[i-1][j].lig == -1){
+        if(i>0 && board.bloc[i-1][j].lig == -1){
             board.bloc[i-1][j].lig = board.bloc[i][j].lig;
             board.bloc[i-1][j].col = board.bloc[i][j].col;
             board.bloc[i][j].lig = -1;
             board.bloc[i][j].col = -1;
         }
-        else if(board.bloc[i+1][j].lig == -1){
-
+        else if(i<NB_LIG-1 && board.bloc[i+1][j].lig == -1){
+            board.bloc[i+1][j].lig = board.bloc[i][j].lig;
+            board.bloc[i+1][j].col = board.bloc[i][j].col;
+            board.bloc[i][j].lig = -1;
+            board.bloc[i][j].col = -1;
         }
-        else if(board.bloc[i][j-1].lig == -1){
-
+        else if(j>0 && board.bloc[i][j-1].lig == -1){
+            board.bloc[i][j-1].lig = board.bloc[i][j].lig;
+            board.bloc[i][j-1].col = board.bloc[i][j].col;
+            board.bloc[i][j].lig = -1;
+            board.bloc[i][j].col = -1;
         }
-        else if(board.bloc[i][j+1].lig == -1){
+        else if(j<NB_COL-1 && board.bloc[i][j+1].lig == -1){
             board.bloc[i][j+1].lig = board.bloc[i][j].lig;
             board.bloc[i][j+1].col = board.bloc[i][j].col;
             board.bloc[i][j].lig = -1;
             board.bloc[i][j].col = -1;
-
         }
-        else{
-            /* On clique dans une case qui n'est pas voisine de la case noire il ne se passe rien */
+    }
+
+    display_game(&board, image);
+    display_grid(&board);
+
+    while(1){
+        MLV_actualise_window();
+
+        MLV_wait_mouse(&x,&y);
+
+        i = x/(CELL);
+        j = y/(CELL);
+
+        if(i>0 && board.bloc[i-1][j].lig == -1){
+            board.bloc[i-1][j].lig = board.bloc[i][j].lig;
+            board.bloc[i-1][j].col = board.bloc[i][j].col;
+            board.bloc[i][j].lig = -1;
+            board.bloc[i][j].col = -1;
         }
-
-        fprintf(stdout, "%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n",
-        board.bloc[0][0].lig, board.bloc[0][0].col, board.bloc[0][1].lig, 
-        board.bloc[0][1].col, board.bloc[0][2].lig, board.bloc[0][2].col, 
-        board.bloc[0][3].lig, board.bloc[0][3].col,board.bloc[1][0].lig, 
-        board.bloc[1][0].col, board.bloc[1][1].lig, board.bloc[1][1].col, 
-        board.bloc[1][2].lig, board.bloc[1][2].col, board.bloc[1][3].lig, 
-        board.bloc[1][3].col, board.bloc[2][0].lig, board.bloc[2][0].col, 
-        board.bloc[2][1].lig, board.bloc[2][1].col, board.bloc[2][2].lig, 
-        board.bloc[2][2].col, board.bloc[2][3].lig, board.bloc[2][3].col, 
-        board.bloc[3][0].lig, board.bloc[3][0].col, board.bloc[3][1].lig, 
-        board.bloc[3][1].col, board.bloc[3][2].lig, board.bloc[3][2].col, 
-        board.bloc[3][3].lig, board.bloc[3][3].col); 
-
+        else if(i<NB_LIG-1 && board.bloc[i+1][j].lig == -1){
+            board.bloc[i+1][j].lig = board.bloc[i][j].lig;
+            board.bloc[i+1][j].col = board.bloc[i][j].col;
+            board.bloc[i][j].lig = -1;
+            board.bloc[i][j].col = -1;
+        }
+        else if(j>0 && board.bloc[i][j-1].lig == -1){
+            board.bloc[i][j-1].lig = board.bloc[i][j].lig;
+            board.bloc[i][j-1].col = board.bloc[i][j].col;
+            board.bloc[i][j].lig = -1;
+            board.bloc[i][j].col = -1;
+        }
+        else if(j<NB_COL-1 && board.bloc[i][j+1].lig == -1){
+            board.bloc[i][j+1].lig = board.bloc[i][j].lig;
+            board.bloc[i][j+1].col = board.bloc[i][j].col;
+            board.bloc[i][j].lig = -1;
+            board.bloc[i][j].col = -1;
+        }
 
         display_game(&board, image);
         display_grid(&board);
 
-        fprintf(stdout, "cell : %d\n", CELL);
-        fprintf(stdout, "x : %d\n", x);
+        if (display_win(&board) == 0){
+            MLV_draw_text(RES/2, RES/2, "Gagné!", MLV_rgba(255, 255, 255, 255));
+        }
     }
 
     MLV_free_window();
 
-    return 0;
+    return EXIT_SUCCESS;
 }
