@@ -1,4 +1,4 @@
-# funnyTaquin (https://github.com/adammehdaoui/funnyTaquin), mini projet du jeu "Taquin"
+# funnyTaquin (https://github.com/adammehdaoui/funnyTaquin), mini projet de jeu "Taquin"
 
 ## Documentation technique
 
