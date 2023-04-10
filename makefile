@@ -10,43 +10,25 @@ INCDIR=include
 
 # FILES
 EXEC=taquin
-OBJ=display.o taquin.o main.o
+OBJ=obj/display.o obj/taquin.o obj/main.o
 
-all: taquin
+all: $(EXEC)
 
-display.o: include/display.h src/display.c
-	$(CC) -c src/display.c $(CFLAGS) $(LDLIBS)
+$(OBJDIR)/display.o: include/display.h src/display.c
+	$(CC) -c src/display.c -o obj/display.o $(CFLAGS) $(LDLIBS) 
 
-taquin.o: include/taquin.h src/taquin.c
-	$(CC) -c src/taquin.c $(CFLAGS) $(LDLIBS)
+$(OBJDIR)/taquin.o: include/taquin.h src/taquin.c
+	$(CC) -c src/taquin.c -o obj/taquin.o $(CFLAGS) $(LDLIBS) 
 
-main.o: src/main.c
-	$(CC) -c src/main.c $(CFLAGS) $(LDLIBS)
+$(OBJDIR)/main.o: src/main.c
+	$(CC) -c src/main.c -o obj/main.o $(CFLAGS) $(LDLIBS)
 
-taquin: $(OBJ)
+$(EXEC): $(OBJ)
 	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS) $(LDLIBS)
+
+force:
+	make --always-make
 
 clean:
 	rm -f $(OBJDIR)/*.o
-	rm -f taquin
-
-# $(CC) $(CFLAGS) -c $< -o $@ $(LDLIBS)
-
-# in_out.o: include/in_out.h src/in_out.c
-# 	$(CC) -c src/in_out.c $(CFLAGS)
-
-# display.o : include/sudoku.h include/display.h src/display.c 
-# 	$(CC) -c src/display.c $(CFLAGS) $(LDLIBS)
-
-# sudoku.o: include/sudoku.h src/sudoku.c include/display.h
-# 	$(CC) -c src/sudoku.c $(CFLAGS)
-
-# main.o: src/main.c
-# 	$(CC) -c src/main.c $(CFLAGS)
-
-# sudoku: $(OBJ)
-# 	$(CC) -o $(MAIN) $(OBJ) $(LDLIBS)
-
-# run: $(OBJ)
-# 	$(CC) -o $(MAIN) $(OBJ) $(LDLIBS)
-# 	./$(MAIN) grid1.txt
+	rm -f $(EXEC)
