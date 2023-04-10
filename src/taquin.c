@@ -1,3 +1,4 @@
+#include <string.h>
 #include "../include/display.h"
 #include "../include/taquin.h"
 
@@ -9,6 +10,9 @@ void initialisationPlateau(Plateau *P) {
             ((P->bloc)[i][j]).col = j;
         }
     }
+
+    ((P->bloc)[NB_LIG-1][NB_LIG-1]).lig = -1;
+    ((P->bloc)[NB_LIG-1][NB_LIG-1]).col = -1;
 }
 
 void mixPlateau(Plateau *P) {
@@ -94,21 +98,56 @@ void gameLoop(Plateau *P, MLV_Image *img) {
 
 }
 
-void gameComp(){
+int isPathAcc(char *pathTest, char *paths[], int size){
+    int i;
+
+    for(i=0; i<size; i++){
+        if(strcmp(pathTest, paths[i]) == 0){
+            return 1;
+        }
+    }
+    
+    return 0;
+}
+
+void gameComp(int argc, char *argv[]){
+    char *accPaths[] = {
+        "hugo.jpg",
+        "spirale.gif",
+        "briques.png"
+    };
+    int size = sizeof(accPaths)/sizeof(accPaths[0]);
+    char *path;
+    char fullPath[SIZE_PATH];
     Plateau board;
     MLV_Image* image;
 
     initialisationPlateau(&board);
 
-    board.bloc[NB_LIG-1][NB_LIG-1].lig = -1;
-    board.bloc[NB_LIG-1][NB_LIG-1].col = -1;
+    MLV_create_window(GAME, NULL, RES, RES);
 
-    MLV_create_window(GAME, NULL, RES, RES); 	
-    image = MLV_load_image("data/image.jpg"); 
+    if(argc >= 2 && isPathAcc(argv[1], accPaths, size)){
+        path = (char *) malloc((strlen(argv[1])) + 1 * sizeof(char));
+        strcpy(path, argv[1]);
+        printf("NON DEFAULT");
+    }
+    else{
+        path = (char *) malloc((strlen(DEFAULT)) + 1 * sizeof(char));
+        strcpy(path, DEFAULT);
+        printf("DEFAULT");
+    }
+
+    strcat(fullPath, IMG_DIR);
+    strcat(fullPath, "/");
+    strcat(fullPath, path);
+
+    image = MLV_load_image(fullPath); 
     if (!image) {
         fprintf(stderr, "Impossible de charger l'image.\n");
         return;
     }
+
+    free(path);
 
     mixPlateau(&board);
 

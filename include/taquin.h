@@ -4,6 +4,9 @@
 #include <MLV/MLV_all.h>
 
 #define GAME "Taquin"
+#define DEFAULT "hugo.jpg"
+#define IMG_DIR "data"
+#define SIZE_PATH 20
 #define NB_LIG 4
 #define NB_COL 4
 #define RES 512
