@@ -1,0 +1,32 @@
+\hypertarget{taquin_8h_source}{}\doxysection{taquin.\+h}
+\label{taquin_8h_source}\index{/home/adam/Développement/C/funnyTaquin/include/taquin.h@{/home/adam/Développement/C/funnyTaquin/include/taquin.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_TAQUIN\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_TAQUIN\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <MLV/MLV\_all.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define GAME "{}Taquin"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define NB\_LIG 4}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define NB\_COL 4}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define RES 512}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define CELL (int)RES/((NB\_COL+NB\_LIG)/2)}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structCarre}{Carre}}\{}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} lig;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} col;}
+\DoxyCodeLine{15 \} \mbox{\hyperlink{structCarre}{Carre}} ;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structPlateau}{Plateau}} \{}
+\DoxyCodeLine{18     \mbox{\hyperlink{structCarre}{Carre}} bloc[NB\_COL][NB\_LIG];}
+\DoxyCodeLine{19 \} \mbox{\hyperlink{structPlateau}{Plateau}} ;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keywordtype}{void} initialisationPlateau(\mbox{\hyperlink{structPlateau}{Plateau}} *P);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} mixPlateau(\mbox{\hyperlink{structPlateau}{Plateau}} *P);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} gameLoop(\mbox{\hyperlink{structPlateau}{Plateau}} *P, MLV\_Image *img);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} gameComp();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
