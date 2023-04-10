@@ -12,6 +12,8 @@ INCDIR=include
 EXEC=taquin
 OBJ=obj/display.o obj/taquin.o obj/main.o
 
+.PHONY: all run force clean
+
 all: $(EXEC)
 
 $(OBJDIR)/display.o: include/display.h src/display.c
@@ -25,6 +27,10 @@ $(OBJDIR)/main.o: src/main.c
 
 $(EXEC): $(OBJ)
 	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS) $(LDLIBS)
+
+run: $(OBJ)
+	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS) $(LDLIBS)
+	./$(EXEC)
 
 force:
 	make --always-make
