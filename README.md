@@ -1,4 +1,4 @@
-# funnyTaquin (https://github.com/adammehdaoui/funnyTaquin), projet de sudoku pour l'ESIEE Paris
+# funnyTaquin (https://github.com/adammehdaoui/funnyTaquin), mini projet du jeu "Taquin"
 
 ## Documentation technique
 
