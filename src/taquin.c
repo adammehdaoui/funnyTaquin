@@ -18,7 +18,9 @@ void initialisationPlateau(Plateau *P) {
 void mixPlateau(Plateau *P) {
     int rx, ry, i, j, n;
     
-    for(n=0; n<20; n++){
+    n=0;
+
+    while(n < 120){
         rx = MLV_get_random_integer(0, RES);
         ry = MLV_get_random_integer(0, RES);
 
@@ -30,26 +32,31 @@ void mixPlateau(Plateau *P) {
             ((P->bloc)[i-1][j]).col = P->bloc[i][j].col;
             ((P->bloc)[i][j]).lig = -1;
             ((P->bloc)[i][j]).col = -1;
+            n++;
         }
         else if(i<NB_LIG-1 && P->bloc[i+1][j].lig == -1){
             ((P->bloc)[i+1][j]).lig = P->bloc[i][j].lig;
             ((P->bloc)[i+1][j]).col = P->bloc[i][j].col;
             ((P->bloc)[i][j]).lig = -1;
             ((P->bloc)[i][j]).col = -1;
+            n++;
         }
         else if(j>0 && P->bloc[i][j-1].lig == -1){
             ((P->bloc)[i][j-1]).lig = P->bloc[i][j].lig;
             ((P->bloc)[i][j-1]).col = P->bloc[i][j].col;
             ((P->bloc)[i][j]).lig = -1;
             ((P->bloc)[i][j]).col = -1;
+            n++;
         }
         else if(j<NB_COL-1 && P->bloc[i][j+1].lig == -1){
             ((P->bloc)[i][j+1]).lig = P->bloc[i][j].lig;
             ((P->bloc)[i][j+1]).col = P->bloc[i][j].col;
             ((P->bloc)[i][j]).lig = -1;
             ((P->bloc)[i][j]).col = -1;
+            n++;
         }
     }
+    
 }
 
 void gameLoop(Plateau *P, MLV_Image *img) {
@@ -141,7 +148,7 @@ void gameComp(int argc, char *argv[]){
     strcat(fullPath, "/");
     strcat(fullPath, path);
 
-    image = MLV_load_image(fullPath); 
+    image = MLV_load_image("data/hugo.jpg"); 
     if (!image) {
         fprintf(stderr, "Impossible de charger l'image.\n");
         return;
