@@ -59,6 +59,24 @@ void mixPlateau(Plateau *P) {
     
 }
 
+int gameWin(Plateau *P){
+    int i, j, flag = 0;
+
+    for(i=0; i<(NB_LIG); i++){
+        for (j=0; j<(NB_COL); j++){
+            if(i==3 && j==3){
+                /* on ne teste pas le dernier carreau */
+            }
+            else {
+                if(P->bloc[i][j].lig != i || P->bloc[i][j].col !=j){
+                    flag = 1;
+                }
+            }
+        }
+    }
+    return flag;
+}
+
 void gameLoop(Plateau *P, MLV_Image *img) {
     int i, j, x, y;
 
@@ -98,7 +116,7 @@ void gameLoop(Plateau *P, MLV_Image *img) {
         display_game(P, img);
         display_grid(P);
 
-        if (display_win(P) == 0){
+        if (gameWin(P) == 0){
             MLV_draw_text(RES/2, RES/2, "Gagné!", MLV_rgba(255, 255, 255, 255));
         }
     }
@@ -148,7 +166,7 @@ void gameComp(int argc, char *argv[]){
     strcat(fullPath, "/");
     strcat(fullPath, path);
 
-    image = MLV_load_image("data/hugo.jpg"); 
+    image = MLV_load_image("ressources/images/hugo.jpg"); 
     if (!image) {
         fprintf(stderr, "Impossible de charger l'image.\n");
         return;
@@ -163,5 +181,6 @@ void gameComp(int argc, char *argv[]){
 
     gameLoop(&board, image);
 
+    MLV_free_image(image);
     MLV_free_window();
 }

@@ -3,24 +3,6 @@
 
 #include <MLV/MLV_all.h>
 
-int display_win(Plateau *P){
-    int i, j, flag = 0;
-
-    for(i=0; i<(NB_LIG); i++){
-        for (j=0; j<(NB_COL); j++){
-            if(i==3 && j==3){
-                /* on ne teste pas le dernier carreau */
-            }
-            else {
-                if(P->bloc[i][j].lig != i || P->bloc[i][j].col !=j){
-                    flag = 1;
-                }
-            }
-        }
-    }
-    return flag;
-}
-
 void display_black_rectangle(int startX, int startY, int height, int width){
     MLV_draw_filled_rectangle(startX, startY, CELL, CELL, MLV_rgba(0, 0, 0, 255));
 }
