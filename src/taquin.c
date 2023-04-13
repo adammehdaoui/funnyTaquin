@@ -1,6 +1,9 @@
 #include <string.h>
+#include <unistd.h>
+
 #include "../include/display.h"
 #include "../include/taquin.h"
+#include "../include/utils.h"
 
 void initialisationPlateau(Plateau *P) {
     int i,j;
@@ -20,7 +23,7 @@ void mixPlateau(Plateau *P) {
     
     n=0;
 
-    while(n < 120){
+    while(n < 1){
         rx = MLV_get_random_integer(0, RES);
         ry = MLV_get_random_integer(0, RES);
 
@@ -56,7 +59,6 @@ void mixPlateau(Plateau *P) {
             n++;
         }
     }
-    
 }
 
 int gameWin(Plateau *P){
@@ -117,22 +119,13 @@ void gameLoop(Plateau *P, MLV_Image *img) {
         display_grid(P);
 
         if (gameWin(P) == 0){
-            MLV_draw_text(RES/2, RES/2, "Gagné!", MLV_rgba(255, 255, 255, 255));
+            display_win();
+            MLV_actualise_window();
+            sleep(10);
+            return;
         }
     }
 
-}
-
-int isPathAcc(char *pathTest, char *paths[], int size){
-    int i;
-
-    for(i=0; i<size; i++){
-        if(strcmp(pathTest, paths[i]) == 0){
-            return 1;
-        }
-    }
-    
-    return 0;
 }
 
 void gameComp(int argc, char *argv[]){
@@ -143,7 +136,7 @@ void gameComp(int argc, char *argv[]){
     };
     int size = sizeof(accPaths)/sizeof(accPaths[0]);
     char *path;
-    char fullPath[SIZE_PATH];
+    char fullPath[SIZE_PATH] = "";
     Plateau board;
     MLV_Image* image;
 
@@ -152,21 +145,20 @@ void gameComp(int argc, char *argv[]){
     MLV_create_window(GAME, NULL, RES, RES);
 
     if(argc >= 2 && isPathAcc(argv[1], accPaths, size)){
-        path = (char *) malloc((strlen(argv[1])) + 1 * sizeof(char));
+        path = (char *) malloc((strlen(argv[1]) + 1) * sizeof(char));
         strcpy(path, argv[1]);
-        printf("NON DEFAULT");
+        printf("NON DEFAULT\n");
     }
     else{
-        path = (char *) malloc((strlen(DEFAULT)) + 1 * sizeof(char));
+        path = (char *) malloc((strlen(DEFAULT) + 1) * sizeof(char));
         strcpy(path, DEFAULT);
-        printf("DEFAULT");
+        printf("DEFAULT\n");
     }
 
     strcat(fullPath, IMG_DIR);
-    strcat(fullPath, "/");
     strcat(fullPath, path);
 
-    image = MLV_load_image("ressources/images/hugo.jpg"); 
+    image = MLV_load_image(fullPath); 
     if (!image) {
         fprintf(stderr, "Impossible de charger l'image.\n");
         return;

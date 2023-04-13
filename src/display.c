@@ -1,10 +1,10 @@
+#include <MLV/MLV_all.h>
+
 #include "../include/display.h"
 #include "../include/taquin.h"
 
-#include <MLV/MLV_all.h>
-
 void display_black_rectangle(int startX, int startY, int height, int width){
-    MLV_draw_filled_rectangle(startX, startY, CELL, CELL, MLV_rgba(0, 0, 0, 255));
+    MLV_draw_filled_rectangle(startX, startY, CELL, CELL, MLV_COLOR_BLACK);
 }
 
 void display_game(Plateau *P, MLV_Image *image){
@@ -45,4 +45,13 @@ void display_grid(Plateau *P){
             MLV_draw_rectangle(startX, startY, CELL, CELL, MLV_rgba(0,0,0,255));
         }
     }
+}
+
+void display_win(){
+    MLV_Font* font = MLV_load_font((FONT_PATH), (FONT_SIZE));
+
+    MLV_draw_text_with_font((RES/2 - CELL/2), (RES/2 - CELL/2), 
+    "Félicitations!", font, MLV_COLOR_WHITE);
+
+    MLV_free_font(font);
 }
