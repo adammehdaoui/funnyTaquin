@@ -1,6 +1,6 @@
 # COMPILATION SETTINGS
 CC=gcc
-CFLAGS=-Wall -pedantic
+CFLAGS=-Wall -std=c17
 LDLIBS=-lMLV -lm -Werror
 
 # DIRECTORIES

@@ -1,4 +1,4 @@
 <map id="Plateau" name="Plateau">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,76,121"/>
-<area shape="rect" id="node2" href="$structCarre.html" title=" " alt="" coords="12,5,69,32"/>
+<area shape="rect" id="node1" title="Structure de données pour le plateau (composé de cases qui sont des struct Carre)." alt="" coords="5,95,76,121"/>
+<area shape="rect" id="node2" href="$structCarre.html" title="Structure de données pour les cases du plateau." alt="" coords="12,5,69,32"/>
 </map>
