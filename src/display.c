@@ -1,4 +1,5 @@
 #include <MLV/MLV_all.h>
+#include <time.h>
 
 #include "../include/display.h"
 #include "../include/taquin.h"
@@ -47,11 +48,31 @@ void display_grid(Plateau *P){
     }
 }
 
-void display_win(){
+void display_win(time_t start_t){
+    time_t end_t;
+    double diff_t;
+    int int_diff;
+    char final_message[50] = "";
+    char time_message[5] = "";
+
     MLV_Font* font = MLV_load_font((FONT_PATH), (FONT_SIZE));
 
-    MLV_draw_text_with_font((RES/2 - CELL/2), (RES/2 - CELL/2), 
-    "Félicitations!", font, MLV_COLOR_WHITE);
+    end_t = time(NULL);
+
+    diff_t = difftime(end_t, start_t);
+
+    int_diff = (int) diff_t;
+
+    sprintf(time_message, "%d", int_diff);
+
+    fprintf(stdout, time_message);
+
+    strcpy(final_message, "Félicitations, vous avez gagné en : ");
+    strcat(final_message, time_message);
+    strcat(final_message, " secondes !");
+
+    MLV_draw_text_with_font(CELL - (CELL/3), CELL + (CELL/2), 
+    final_message, font, MLV_COLOR_WHITE);
 
     MLV_free_font(font);
 }

@@ -1,5 +1,6 @@
 #include <string.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "../include/display.h"
 #include "../include/taquin.h"
@@ -81,6 +82,9 @@ int gameWin(Plateau *P){
 
 void gameLoop(Plateau *P, MLV_Image *img) {
     int i, j, x, y;
+    time_t start_t;
+
+    start_t = time(NULL);
 
     while(1){
         MLV_actualise_window();
@@ -119,7 +123,7 @@ void gameLoop(Plateau *P, MLV_Image *img) {
         display_grid(P);
 
         if (gameWin(P) == 0){
-            display_win();
+            display_win(start_t);
             MLV_actualise_window();
             sleep(10);
             return;

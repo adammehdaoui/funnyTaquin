@@ -8,6 +8,6 @@
 void display_black_rectangle(int startX, int startY, int height, int width);
 void display_game(Plateau *P, MLV_Image* image);
 void display_grid(Plateau *P);
-void display_win();
+void display_win(time_t start_t);
 
 #endif

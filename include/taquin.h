@@ -8,7 +8,7 @@
 #define IMG_DIR "ressources/images/"
 #define FONT_PATH "ressources/fonts/Montserrat.ttf"
 #define SIZE_PATH 20
-#define FONT_SIZE 20
+#define FONT_SIZE 15
 #define NB_LIG 4
 #define NB_COL 4
 #define RES 512
