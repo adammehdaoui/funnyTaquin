@@ -21,9 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">funnyTaquin<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">funnyTaquin<span id="projectnumber">&#160;1.2</span>
    </div>
-   <div id="projectbrief">Projet de jeu Taquin en C utilisant la libraire MLV</div>
+   <div id="projectbrief">Taquin en C (projet INFO1)</div>
   </td>
  </tr>
  </tbody>
@@ -70,23 +70,28 @@ $(function() {
   <div class="headertitle"><div class="title">display.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __DISPLAY__</span></div>
+<a href="display_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __DISPLAY__</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __DISPLAY__</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;MLV/MLV_all.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;taquin.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="taquin_8h.html">taquin.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> display_black_rectangle(<span class="keywordtype">int</span> startX, <span class="keywordtype">int</span> startY, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#a248ded668af9a7d2fce54a7c99fa5208">display_black_rectangle</a>(<span class="keywordtype">int</span> startX, <span class="keywordtype">int</span> startY, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> display_game(<a class="code hl_struct" href="structPlateau.html">Plateau</a> *P, MLV_Image* image);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#abd8e680bcc9e40e694ad596357fc23dd">display_game</a>(<a class="code hl_struct" href="structPlateau.html">Plateau</a> *P, MLV_Image* image);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> display_grid(<a class="code hl_struct" href="structPlateau.html">Plateau</a> *P);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#aa0756d246b6b24287778aac74b2f23fa">display_grid</a>(<a class="code hl_struct" href="structPlateau.html">Plateau</a> *P);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> display_win(time_t start_t);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="display_8h.html#a40a62e30a45c15864a62dfa9f44e2856">display_win</a>(time_t start_t);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adisplay_8h_html_a248ded668af9a7d2fce54a7c99fa5208"><div class="ttname"><a href="display_8h.html#a248ded668af9a7d2fce54a7c99fa5208">display_black_rectangle</a></div><div class="ttdeci">void display_black_rectangle(int startX, int startY, int height, int width)</div><div class="ttdoc">Affiche un rectangle noir à l'emplacement donné. Le rectangle noir signifie que la case est vide,...</div><div class="ttdef"><b>Definition:</b> display.c:7</div></div>
+<div class="ttc" id="adisplay_8h_html_a40a62e30a45c15864a62dfa9f44e2856"><div class="ttname"><a href="display_8h.html#a40a62e30a45c15864a62dfa9f44e2856">display_win</a></div><div class="ttdeci">void display_win(time_t start_t)</div><div class="ttdoc">Affiche un message de victoire lorsque le joueur a gagné. Ce message contient le temps mis par le jou...</div><div class="ttdef"><b>Definition:</b> display.c:51</div></div>
+<div class="ttc" id="adisplay_8h_html_aa0756d246b6b24287778aac74b2f23fa"><div class="ttname"><a href="display_8h.html#aa0756d246b6b24287778aac74b2f23fa">display_grid</a></div><div class="ttdeci">void display_grid(Plateau *P)</div><div class="ttdoc">Affiche la grille du jeu. Cette fonction sera appelée à chaque boucle de raffraichissement de l'écran...</div><div class="ttdef"><b>Definition:</b> display.c:38</div></div>
+<div class="ttc" id="adisplay_8h_html_abd8e680bcc9e40e694ad596357fc23dd"><div class="ttname"><a href="display_8h.html#abd8e680bcc9e40e694ad596357fc23dd">display_game</a></div><div class="ttdeci">void display_game(Plateau *P, MLV_Image *image)</div><div class="ttdoc">Affiche l'état actuel du jeu. Cela consiste à afficher l'image de fond, puis les cases du plateau....</div><div class="ttdef"><b>Definition:</b> display.c:11</div></div>
 <div class="ttc" id="astructPlateau_html"><div class="ttname"><a href="structPlateau.html">Plateau</a></div><div class="ttdoc">Structure de données pour le plateau (composé de cases qui sont des struct Carre).</div><div class="ttdef"><b>Definition:</b> taquin.h:30</div></div>
+<div class="ttc" id="ataquin_8h_html"><div class="ttname"><a href="taquin_8h.html">taquin.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

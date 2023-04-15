@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>funnyTaquin: Référence du fichier /home/adam/Développement/C/funnyTaquin/src/display.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">funnyTaquin<span id="projectnumber">&#160;1.2</span>
+   </div>
+   <div id="projectbrief">Taquin en C (projet INFO1)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_afa8b3c00a828b5e6fd7f37e5c8b5919.html">C</a></li><li class="navelem"><a class="el" href="dir_5abf3a629355fde09131946e940d8301.html">funnyTaquin</a></li><li class="navelem"><a class="el" href="dir_a5cc6a342d7da1818c44283c04e52e66.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier display.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="display_8h_source.html">../include/display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="taquin_8h_source.html">../include/taquin.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a248ded668af9a7d2fce54a7c99fa5208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a248ded668af9a7d2fce54a7c99fa5208">display_black_rectangle</a> (int startX, int startY, int height, int width)</td></tr>
+<tr class="memdesc:a248ded668af9a7d2fce54a7c99fa5208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un rectangle noir à l'emplacement donné. Le rectangle noir signifie que la case est vide, il s'agit donc d'un coup possible.  <a href="display_8c.html#a248ded668af9a7d2fce54a7c99fa5208">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a248ded668af9a7d2fce54a7c99fa5208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8e680bcc9e40e694ad596357fc23dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#abd8e680bcc9e40e694ad596357fc23dd">display_game</a> (<a class="el" href="structPlateau.html">Plateau</a> *P, MLV_Image *image)</td></tr>
+<tr class="memdesc:abd8e680bcc9e40e694ad596357fc23dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche l'état actuel du jeu. Cela consiste à afficher l'image de fond, puis les cases du plateau. Cette fonction sera donc appelée à chaque boucle de raffraichissement de l'écran.  <a href="display_8c.html#abd8e680bcc9e40e694ad596357fc23dd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abd8e680bcc9e40e694ad596357fc23dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0756d246b6b24287778aac74b2f23fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#aa0756d246b6b24287778aac74b2f23fa">display_grid</a> (<a class="el" href="structPlateau.html">Plateau</a> *P)</td></tr>
+<tr class="memdesc:aa0756d246b6b24287778aac74b2f23fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la grille du jeu. Cette fonction sera appelée à chaque boucle de raffraichissement de l'écran après display_game.  <a href="display_8c.html#aa0756d246b6b24287778aac74b2f23fa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa0756d246b6b24287778aac74b2f23fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a62e30a45c15864a62dfa9f44e2856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a40a62e30a45c15864a62dfa9f44e2856">display_win</a> (time_t start_t)</td></tr>
+<tr class="memdesc:a40a62e30a45c15864a62dfa9f44e2856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message de victoire lorsque le joueur a gagné. Ce message contient le temps mis par le joueur pour résoudre le Taquin (d'où le paramètre start_t qui permettra de calculer la différence entre le temps de début de jeu et de fin de jeu).  <a href="display_8c.html#a40a62e30a45c15864a62dfa9f44e2856">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a40a62e30a45c15864a62dfa9f44e2856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a248ded668af9a7d2fce54a7c99fa5208" name="a248ded668af9a7d2fce54a7c99fa5208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248ded668af9a7d2fce54a7c99fa5208">&#9670;&nbsp;</a></span>display_black_rectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_black_rectangle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>startY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un rectangle noir à l'emplacement donné. Le rectangle noir signifie que la case est vide, il s'agit donc d'un coup possible. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">startX</td><td></td></tr>
+    <tr><td class="paramname">startY</td><td></td></tr>
+    <tr><td class="paramname">height</td><td></td></tr>
+    <tr><td class="paramname">width</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd8e680bcc9e40e694ad596357fc23dd" name="abd8e680bcc9e40e694ad596357fc23dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8e680bcc9e40e694ad596357fc23dd">&#9670;&nbsp;</a></span>display_game()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_game </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramname"><em>P</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>image</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche l'état actuel du jeu. Cela consiste à afficher l'image de fond, puis les cases du plateau. Cette fonction sera donc appelée à chaque boucle de raffraichissement de l'écran. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td></td></tr>
+    <tr><td class="paramname">image</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0756d246b6b24287778aac74b2f23fa" name="aa0756d246b6b24287778aac74b2f23fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0756d246b6b24287778aac74b2f23fa">&#9670;&nbsp;</a></span>display_grid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_grid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramname"><em>P</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche la grille du jeu. Cette fonction sera appelée à chaque boucle de raffraichissement de l'écran après display_game. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40a62e30a45c15864a62dfa9f44e2856" name="a40a62e30a45c15864a62dfa9f44e2856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a62e30a45c15864a62dfa9f44e2856">&#9670;&nbsp;</a></span>display_win()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_win </td>
+          <td>(</td>
+          <td class="paramtype">time_t&#160;</td>
+          <td class="paramname"><em>start_t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message de victoire lorsque le joueur a gagné. Ce message contient le temps mis par le joueur pour résoudre le Taquin (d'où le paramètre start_t qui permettra de calculer la différence entre le temps de début de jeu et de fin de jeu). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start_t</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>
