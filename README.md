@@ -23,3 +23,28 @@ Cloner le repo avec :
 ```sh 
 git clone https://github.com/adammehdaoui/funnyTaquin.git
 ```
+
+## Utilisation et lancement du jeu
+
+Pour lancer le taquin avec une grille par défaut :
+
+```sh
+make run
+```
+
+Voici la commande pour lancer le jeu avec une image disponible (briques.png, hugo.jpg ou spirale.gif). Ici on lance le jeu avec l'image **briques.png**:
+
+```sh
+make
+```
+
+```sh
+./taquin briques.png
+```
+
+## Tutoriel en jeu
+
+Cliquer sur une case proche de la case noire pour la déplacer.
+À la fin du jeu, un message de félicitations s'affichera
+et donnera le temps pris par l'utilisateur pour résoudre le taquin.
+Bon courage!

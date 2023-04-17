@@ -1,6 +1,9 @@
 #Garbage dir
 .vscode/
 
+#Other garbage
+.DS_Store
+
 #Executable file after make
 taquin
 

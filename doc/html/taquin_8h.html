@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>funnyTaquin: Référence du fichier /home/adam/Développement/C/funnyTaquin/include/taquin.h</title>
+<title>funnyTaquin: Référence du fichier include/taquin.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_afa8b3c00a828b5e6fd7f37e5c8b5919.html">C</a></li><li class="navelem"><a class="el" href="dir_5abf3a629355fde09131946e940d8301.html">funnyTaquin</a></li><li class="navelem"><a class="el" href="dir_c018d3312e52e5de065ea4709a34039c.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,11 +88,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCarre.html">Carre</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour les cases du plateau.  <a href="structCarre.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_carre.html">Carre</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour les cases du plateau.  <a href="struct_carre.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPlateau.html">Plateau</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour le plateau (composé de cases qui sont des struct <a class="el" href="structCarre.html" title="Structure de données pour les cases du plateau.">Carre</a>).  <a href="structPlateau.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_plateau.html">Plateau</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour le plateau (composé de cases qui sont des struct <a class="el" href="struct_carre.html" title="Structure de données pour les cases du plateau.">Carre</a>).  <a href="struct_plateau.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -113,31 +120,31 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Définitions de type</h2></td></tr>
-<tr class="memitem:a64def20622e7ba2fdb8a5625fc63271e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structCarre.html">Carre</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#a64def20622e7ba2fdb8a5625fc63271e">Carre</a></td></tr>
-<tr class="memdesc:a64def20622e7ba2fdb8a5625fc63271e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour les cases du plateau.  <a href="taquin_8h.html#a64def20622e7ba2fdb8a5625fc63271e">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a64def20622e7ba2fdb8a5625fc63271e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_carre.html">Carre</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#a64def20622e7ba2fdb8a5625fc63271e">Carre</a></td></tr>
+<tr class="memdesc:a64def20622e7ba2fdb8a5625fc63271e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour les cases du plateau.  <br /></td></tr>
 <tr class="separator:a64def20622e7ba2fdb8a5625fc63271e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e65877920c996cedb5fb7908acfef49"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structPlateau.html">Plateau</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#a1e65877920c996cedb5fb7908acfef49">Plateau</a></td></tr>
-<tr class="memdesc:a1e65877920c996cedb5fb7908acfef49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour le plateau (composé de cases qui sont des struct <a class="el" href="structCarre.html" title="Structure de données pour les cases du plateau.">Carre</a>).  <a href="taquin_8h.html#a1e65877920c996cedb5fb7908acfef49">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a1e65877920c996cedb5fb7908acfef49"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_plateau.html">Plateau</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#a1e65877920c996cedb5fb7908acfef49">Plateau</a></td></tr>
+<tr class="memdesc:a1e65877920c996cedb5fb7908acfef49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure de données pour le plateau (composé de cases qui sont des struct <a class="el" href="struct_carre.html" title="Structure de données pour les cases du plateau.">Carre</a>).  <br /></td></tr>
 <tr class="separator:a1e65877920c996cedb5fb7908acfef49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a8ca5134cdc407b363d4ea458d7aecd33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#a8ca5134cdc407b363d4ea458d7aecd33">initialisationPlateau</a> (<a class="el" href="structPlateau.html">Plateau</a> *P)</td></tr>
-<tr class="memdesc:a8ca5134cdc407b363d4ea458d7aecd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalise le plateau de jeu. La fonction donne une valeur à la ligne/colonne de chaque case du plateau. On notera également que la case n'étant pas censée être affichée prendra la valeur -1 en ligne et en colonne.  <a href="taquin_8h.html#a8ca5134cdc407b363d4ea458d7aecd33">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a8ca5134cdc407b363d4ea458d7aecd33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#a8ca5134cdc407b363d4ea458d7aecd33">initialisationPlateau</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P)</td></tr>
+<tr class="memdesc:a8ca5134cdc407b363d4ea458d7aecd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalise le plateau de jeu. La fonction donne une valeur à la ligne/colonne de chaque case du plateau. On notera également que la case n'étant pas censée être affichée prendra la valeur -1 en ligne et en colonne.  <br /></td></tr>
 <tr class="separator:a8ca5134cdc407b363d4ea458d7aecd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abff09f574ce5585a59d19cac9b036853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#abff09f574ce5585a59d19cac9b036853">mixPlateau</a> (<a class="el" href="structPlateau.html">Plateau</a> *P)</td></tr>
-<tr class="memdesc:abff09f574ce5585a59d19cac9b036853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange le plateau avec 120 déplacements aléatoires mais autorisés. On échange ainsi les valeur des lignes/colonnes de la case noire avec une case voisine.  <a href="taquin_8h.html#abff09f574ce5585a59d19cac9b036853">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:abff09f574ce5585a59d19cac9b036853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#abff09f574ce5585a59d19cac9b036853">mixPlateau</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P)</td></tr>
+<tr class="memdesc:abff09f574ce5585a59d19cac9b036853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange le plateau avec 120 déplacements aléatoires mais autorisés. On échange ainsi les valeur des lignes/colonnes de la case noire avec une case voisine.  <br /></td></tr>
 <tr class="separator:abff09f574ce5585a59d19cac9b036853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61322c6a1ad0a64fc602cd07889513d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#aa61322c6a1ad0a64fc602cd07889513d">gameLoop</a> (<a class="el" href="structPlateau.html">Plateau</a> *P, MLV_Image *img)</td></tr>
-<tr class="memdesc:aa61322c6a1ad0a64fc602cd07889513d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de raffraichissemnt du jeu. Elle affiche l'image de fond, la grille et les cases du plateau.  <a href="taquin_8h.html#aa61322c6a1ad0a64fc602cd07889513d">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:aa61322c6a1ad0a64fc602cd07889513d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#aa61322c6a1ad0a64fc602cd07889513d">gameLoop</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P, MLV_Image *img)</td></tr>
+<tr class="memdesc:aa61322c6a1ad0a64fc602cd07889513d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de raffraichissemnt du jeu. Elle affiche l'image de fond, la grille et les cases du plateau.  <br /></td></tr>
 <tr class="separator:aa61322c6a1ad0a64fc602cd07889513d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adea4b42b6c54170e24de2b61fea4ec3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8h.html#adea4b42b6c54170e24de2b61fea4ec3c">gameComp</a> ()</td></tr>
-<tr class="memdesc:adea4b42b6c54170e24de2b61fea4ec3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant de composer les différents éléments du jeu. La fonction gère le jeu de bout en bout. Elle sera donc la seule fonction appelée dans le main.  <a href="taquin_8h.html#adea4b42b6c54170e24de2b61fea4ec3c">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:adea4b42b6c54170e24de2b61fea4ec3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction permettant de composer les différents éléments du jeu. La fonction gère le jeu de bout en bout. Elle sera donc la seule fonction appelée dans le main.  <br /></td></tr>
 <tr class="separator:adea4b42b6c54170e24de2b61fea4ec3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a id="a8b4d4a1fcf419d5a3820c5b4b027ee8b" name="a8b4d4a1fcf419d5a3820c5b4b027ee8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b4d4a1fcf419d5a3820c5b4b027ee8b">&#9670;&nbsp;</a></span>CELL</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b4d4a1fcf419d5a3820c5b4b027ee8b">&#9670;&#160;</a></span>CELL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +158,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a3da44afeba217135a680a7477b5e3ce3" name="a3da44afeba217135a680a7477b5e3ce3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3da44afeba217135a680a7477b5e3ce3">&#9670;&nbsp;</a></span>DEFAULT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da44afeba217135a680a7477b5e3ce3">&#9670;&#160;</a></span>DEFAULT</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +172,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="af326d9b4cced6fd44a9f9567dc666014" name="af326d9b4cced6fd44a9f9567dc666014"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af326d9b4cced6fd44a9f9567dc666014">&#9670;&nbsp;</a></span>FONT_PATH</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af326d9b4cced6fd44a9f9567dc666014">&#9670;&#160;</a></span>FONT_PATH</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +186,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="aa968a61524f9ed159c4c5464cb26dd41" name="aa968a61524f9ed159c4c5464cb26dd41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa968a61524f9ed159c4c5464cb26dd41">&#9670;&nbsp;</a></span>FONT_SIZE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa968a61524f9ed159c4c5464cb26dd41">&#9670;&#160;</a></span>FONT_SIZE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +200,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a81dbe4cce536eb83872b539079ba4139" name="a81dbe4cce536eb83872b539079ba4139"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81dbe4cce536eb83872b539079ba4139">&#9670;&nbsp;</a></span>GAME</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81dbe4cce536eb83872b539079ba4139">&#9670;&#160;</a></span>GAME</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +214,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="acb0676a77d8472d58f8caa2795d53045" name="acb0676a77d8472d58f8caa2795d53045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb0676a77d8472d58f8caa2795d53045">&#9670;&nbsp;</a></span>IMG_DIR</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0676a77d8472d58f8caa2795d53045">&#9670;&#160;</a></span>IMG_DIR</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +228,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a3abe884c18182831cac6f12ecaf06f8b" name="a3abe884c18182831cac6f12ecaf06f8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3abe884c18182831cac6f12ecaf06f8b">&#9670;&nbsp;</a></span>NB_COL</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3abe884c18182831cac6f12ecaf06f8b">&#9670;&#160;</a></span>NB_COL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -235,7 +242,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="aa6e1cb1e33dd2dba64a1481445155044" name="aa6e1cb1e33dd2dba64a1481445155044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6e1cb1e33dd2dba64a1481445155044">&#9670;&nbsp;</a></span>NB_LIG</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e1cb1e33dd2dba64a1481445155044">&#9670;&#160;</a></span>NB_LIG</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +256,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a65b26605d90a0bcd0e13e05db54f551f" name="a65b26605d90a0bcd0e13e05db54f551f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65b26605d90a0bcd0e13e05db54f551f">&#9670;&nbsp;</a></span>RES</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b26605d90a0bcd0e13e05db54f551f">&#9670;&#160;</a></span>RES</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +270,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="af6d232c4bf617fabb30dda3a7b3d0149" name="af6d232c4bf617fabb30dda3a7b3d0149"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d232c4bf617fabb30dda3a7b3d0149">&#9670;&nbsp;</a></span>SIZE_PATH</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d232c4bf617fabb30dda3a7b3d0149">&#9670;&#160;</a></span>SIZE_PATH</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,13 +285,13 @@ Fonctions</h2></td></tr>
 </div>
 <h2 class="groupheader">Documentation des définitions de type</h2>
 <a id="a64def20622e7ba2fdb8a5625fc63271e" name="a64def20622e7ba2fdb8a5625fc63271e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64def20622e7ba2fdb8a5625fc63271e">&#9670;&nbsp;</a></span>Carre</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64def20622e7ba2fdb8a5625fc63271e">&#9670;&#160;</a></span>Carre</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structCarre.html">Carre</a> <a class="el" href="structCarre.html">Carre</a></td>
+          <td class="memname">typedef struct <a class="el" href="struct_carre.html">Carre</a> <a class="el" href="struct_carre.html">Carre</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -294,24 +301,24 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a1e65877920c996cedb5fb7908acfef49" name="a1e65877920c996cedb5fb7908acfef49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e65877920c996cedb5fb7908acfef49">&#9670;&nbsp;</a></span>Plateau</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e65877920c996cedb5fb7908acfef49">&#9670;&#160;</a></span>Plateau</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="structPlateau.html">Plateau</a> <a class="el" href="structPlateau.html">Plateau</a></td>
+          <td class="memname">typedef struct <a class="el" href="struct_plateau.html">Plateau</a> <a class="el" href="struct_plateau.html">Plateau</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Structure de données pour le plateau (composé de cases qui sont des struct <a class="el" href="structCarre.html" title="Structure de données pour les cases du plateau.">Carre</a>). </p>
+<p>Structure de données pour le plateau (composé de cases qui sont des struct <a class="el" href="struct_carre.html" title="Structure de données pour les cases du plateau.">Carre</a>). </p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="adea4b42b6c54170e24de2b61fea4ec3c" name="adea4b42b6c54170e24de2b61fea4ec3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adea4b42b6c54170e24de2b61fea4ec3c">&#9670;&nbsp;</a></span>gameComp()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adea4b42b6c54170e24de2b61fea4ec3c">&#9670;&#160;</a></span>gameComp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +344,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="aa61322c6a1ad0a64fc602cd07889513d" name="aa61322c6a1ad0a64fc602cd07889513d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61322c6a1ad0a64fc602cd07889513d">&#9670;&nbsp;</a></span>gameLoop()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61322c6a1ad0a64fc602cd07889513d">&#9670;&#160;</a></span>gameLoop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +352,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void gameLoop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em>, </td>
         </tr>
         <tr>
@@ -374,7 +381,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a8ca5134cdc407b363d4ea458d7aecd33" name="a8ca5134cdc407b363d4ea458d7aecd33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ca5134cdc407b363d4ea458d7aecd33">&#9670;&nbsp;</a></span>initialisationPlateau()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca5134cdc407b363d4ea458d7aecd33">&#9670;&#160;</a></span>initialisationPlateau()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +389,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void initialisationPlateau </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em></td><td>)</td>
           <td></td>
         </tr>
@@ -400,7 +407,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="abff09f574ce5585a59d19cac9b036853" name="abff09f574ce5585a59d19cac9b036853"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abff09f574ce5585a59d19cac9b036853">&#9670;&nbsp;</a></span>mixPlateau()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abff09f574ce5585a59d19cac9b036853">&#9670;&#160;</a></span>mixPlateau()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -408,7 +415,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void mixPlateau </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em></td><td>)</td>
           <td></td>
         </tr>
@@ -428,7 +435,7 @@ Fonctions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>
