@@ -26,7 +26,7 @@ git clone https://github.com/adammehdaoui/funnyTaquin.git
 
 ## Utilisation et lancement du jeu
 
-Pour lancer le taquin avec une grille par défaut :
+Pour lancer le taquin avec une image par défaut :
 
 ```sh
 make run
