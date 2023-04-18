@@ -24,7 +24,7 @@ void mixPlateau(Plateau *P) {
     
     n=0;
 
-    while(n < 1){
+    while(n < MIX){
         rx = MLV_get_random_integer(0, RES);
         ry = MLV_get_random_integer(0, RES);
 
