@@ -33,7 +33,7 @@ $(EXEC): $(OBJ)
 
 run: $(OBJ)
 	$(CC) -o $(EXEC) $(OBJ) $(CFLAGS) $(LDLIBS)
-	./$(EXEC)
+	./$(EXEC) $(ARG)
 
 force:
 	make --always-make

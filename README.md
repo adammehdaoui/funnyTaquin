@@ -32,14 +32,20 @@ Pour lancer le taquin avec une image par défaut :
 make run
 ```
 
-Voici la commande pour lancer le jeu avec une image disponible (briques.png, hugo.jpg ou spirale.gif). Ici on lance le jeu avec l'image **briques.png**:
+Voici la commande pour lancer le jeu avec une image disponible (briques.png, hugo.jpg ou spirale.gif). Ici on lance le jeu avec l'image **briques.png** :
 
 ```sh
 make
 ```
-
+puis
 ```sh
 ./taquin briques.png
+```
+
+ou
+
+```sh
+make run ARG=briques.png
 ```
 
 ## Tutoriel en jeu

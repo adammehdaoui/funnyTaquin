@@ -4,15 +4,36 @@
 #include <MLV/MLV_all.h>
 
 #define GAME "Taquin"
-#define DEFAULT "hugo.jpg"
 #define IMG_DIR "ressources/images/"
 #define FONT_PATH "ressources/fonts/Montserrat.ttf"
 #define SIZE_PATH 20
 #define FONT_SIZE 15
 #define NB_LIG 4
 #define NB_COL 4
+
+/**
+ * @brief Image utilisée par défaut lorsque l'utilisateur ne spécifie pas d'image ou que l'image spécifiée n'existe pas.
+ * 
+ */
+#define DEFAULT "hugo.jpg"
+
+/**
+ * @brief Taille de la fenêtre de jeu (résolution).
+ * 
+ */
 #define RES 512
+
+/**
+ * @brief Taille d'une cellule dans la grille.
+ * 
+ */
 #define CELL (int)RES/((NB_COL+NB_LIG)/2)
+
+/**
+ * @brief Nombre défini de manière statistique pour mélanger complètement le plateau de jeu
+ * 
+ */
+#define MIX 120
 
 /**
  * @brief Structure de données pour les cases du plateau.
