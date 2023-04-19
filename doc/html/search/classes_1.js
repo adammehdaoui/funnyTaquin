@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plateau_0',['Plateau',['../structPlateau.html',1,'']]]
+  ['plateau_0',['Plateau',['../struct_plateau.html',1,'']]]
 ];

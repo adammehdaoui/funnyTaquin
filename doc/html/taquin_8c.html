@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>funnyTaquin: Référence du fichier /home/adam/Développement/C/funnyTaquin/src/taquin.c</title>
+<title>funnyTaquin: Référence du fichier src/taquin.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -56,14 +56,21 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8809f998216d6882cb18d54a3323748a.html">Développement</a></li><li class="navelem"><a class="el" href="dir_afa8b3c00a828b5e6fd7f37e5c8b5919.html">C</a></li><li class="navelem"><a class="el" href="dir_5abf3a629355fde09131946e940d8301.html">funnyTaquin</a></li><li class="navelem"><a class="el" href="dir_a5cc6a342d7da1818c44283c04e52e66.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,23 +88,23 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a8ca5134cdc407b363d4ea458d7aecd33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#a8ca5134cdc407b363d4ea458d7aecd33">initialisationPlateau</a> (<a class="el" href="structPlateau.html">Plateau</a> *P)</td></tr>
-<tr class="memdesc:a8ca5134cdc407b363d4ea458d7aecd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalise le plateau de jeu. La fonction donne une valeur à la ligne/colonne de chaque case du plateau. On notera également que la case n'étant pas censée être affichée prendra la valeur -1 en ligne et en colonne.  <a href="taquin_8c.html#a8ca5134cdc407b363d4ea458d7aecd33">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a8ca5134cdc407b363d4ea458d7aecd33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#a8ca5134cdc407b363d4ea458d7aecd33">initialisationPlateau</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P)</td></tr>
+<tr class="memdesc:a8ca5134cdc407b363d4ea458d7aecd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initalise le plateau de jeu. La fonction donne une valeur à la ligne/colonne de chaque case du plateau. On notera également que la case n'étant pas censée être affichée prendra la valeur -1 en ligne et en colonne.  <br /></td></tr>
 <tr class="separator:a8ca5134cdc407b363d4ea458d7aecd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abff09f574ce5585a59d19cac9b036853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#abff09f574ce5585a59d19cac9b036853">mixPlateau</a> (<a class="el" href="structPlateau.html">Plateau</a> *P)</td></tr>
-<tr class="memdesc:abff09f574ce5585a59d19cac9b036853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange le plateau avec 120 déplacements aléatoires mais autorisés. On échange ainsi les valeur des lignes/colonnes de la case noire avec une case voisine.  <a href="taquin_8c.html#abff09f574ce5585a59d19cac9b036853">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:abff09f574ce5585a59d19cac9b036853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#abff09f574ce5585a59d19cac9b036853">mixPlateau</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P)</td></tr>
+<tr class="memdesc:abff09f574ce5585a59d19cac9b036853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange le plateau avec 120 déplacements aléatoires mais autorisés. On échange ainsi les valeur des lignes/colonnes de la case noire avec une case voisine.  <br /></td></tr>
 <tr class="separator:abff09f574ce5585a59d19cac9b036853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75adfc275ce0b9bebded4d3c6f87a0d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#a75adfc275ce0b9bebded4d3c6f87a0d5">gameWin</a> (<a class="el" href="structPlateau.html">Plateau</a> *P)</td></tr>
+<tr class="memitem:a75adfc275ce0b9bebded4d3c6f87a0d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#a75adfc275ce0b9bebded4d3c6f87a0d5">gameWin</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P)</td></tr>
 <tr class="separator:a75adfc275ce0b9bebded4d3c6f87a0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61322c6a1ad0a64fc602cd07889513d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#aa61322c6a1ad0a64fc602cd07889513d">gameLoop</a> (<a class="el" href="structPlateau.html">Plateau</a> *P, MLV_Image *img)</td></tr>
-<tr class="memdesc:aa61322c6a1ad0a64fc602cd07889513d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de raffraichissemnt du jeu. Elle affiche l'image de fond, la grille et les cases du plateau.  <a href="taquin_8c.html#aa61322c6a1ad0a64fc602cd07889513d">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:aa61322c6a1ad0a64fc602cd07889513d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#aa61322c6a1ad0a64fc602cd07889513d">gameLoop</a> (<a class="el" href="struct_plateau.html">Plateau</a> *P, MLV_Image *img)</td></tr>
+<tr class="memdesc:aa61322c6a1ad0a64fc602cd07889513d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de raffraichissemnt du jeu. Elle affiche l'image de fond, la grille et les cases du plateau.  <br /></td></tr>
 <tr class="separator:aa61322c6a1ad0a64fc602cd07889513d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf249c1de2821fafca8cd7739f69724c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="taquin_8c.html#abf249c1de2821fafca8cd7739f69724c">gameComp</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:abf249c1de2821fafca8cd7739f69724c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="abf249c1de2821fafca8cd7739f69724c" name="abf249c1de2821fafca8cd7739f69724c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf249c1de2821fafca8cd7739f69724c">&#9670;&nbsp;</a></span>gameComp()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abf249c1de2821fafca8cd7739f69724c">&#9670;&#160;</a></span>gameComp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,7 +132,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="aa61322c6a1ad0a64fc602cd07889513d" name="aa61322c6a1ad0a64fc602cd07889513d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61322c6a1ad0a64fc602cd07889513d">&#9670;&nbsp;</a></span>gameLoop()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa61322c6a1ad0a64fc602cd07889513d">&#9670;&#160;</a></span>gameLoop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +140,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void gameLoop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em>, </td>
         </tr>
         <tr>
@@ -162,7 +169,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a75adfc275ce0b9bebded4d3c6f87a0d5" name="a75adfc275ce0b9bebded4d3c6f87a0d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75adfc275ce0b9bebded4d3c6f87a0d5">&#9670;&nbsp;</a></span>gameWin()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a75adfc275ce0b9bebded4d3c6f87a0d5">&#9670;&#160;</a></span>gameWin()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +177,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">int gameWin </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em></td><td>)</td>
           <td></td>
         </tr>
@@ -180,7 +187,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="a8ca5134cdc407b363d4ea458d7aecd33" name="a8ca5134cdc407b363d4ea458d7aecd33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ca5134cdc407b363d4ea458d7aecd33">&#9670;&nbsp;</a></span>initialisationPlateau()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca5134cdc407b363d4ea458d7aecd33">&#9670;&#160;</a></span>initialisationPlateau()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +195,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void initialisationPlateau </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em></td><td>)</td>
           <td></td>
         </tr>
@@ -206,7 +213,7 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <a id="abff09f574ce5585a59d19cac9b036853" name="abff09f574ce5585a59d19cac9b036853"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abff09f574ce5585a59d19cac9b036853">&#9670;&nbsp;</a></span>mixPlateau()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abff09f574ce5585a59d19cac9b036853">&#9670;&#160;</a></span>mixPlateau()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +221,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void mixPlateau </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structPlateau.html">Plateau</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_plateau.html">Plateau</a> *&#160;</td>
           <td class="paramname"><em>P</em></td><td>)</td>
           <td></td>
         </tr>
@@ -234,7 +241,7 @@ Fonctions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>
